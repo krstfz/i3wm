@@ -4,6 +4,7 @@ i3wm catppuccin setup
 * bar - i3blocks
 * spotify - spicetify 
 * launcher - rofi
+* fonts - JetBrainsMono Nerd Font, Ubuntu Nerd Font, Fira Code Mono
 
 **Preview**
 
