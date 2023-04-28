@@ -29,24 +29,29 @@ command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=18
 markup="pango"
 
-####################################################################################
 
-[separator]
+####################################################################################
 
 [jas]
 command=$SCRIPT_DIR/jas/jas
 color=#eed49f
 label=󰃟
-markup=pango
+markup="pango"
 interval=once
 signal=10
 #STEP_SIZE=5
 
 [baterkos]
 command=$SCRIPT_DIR/battery/battery
-interval=5
+interval=10
 label= 
 color=#b7bdf8
+
+#[battery]
+#command=$SCRIPT_DIR/battery/battery
+#label=󰁹
+#markup=pango
+#interval=once
 
 [volume]
 command=$SCRIPT_DIR/volume/volume
@@ -55,7 +60,7 @@ label=󰕾
 interval=5
 signal=10
 color=#f5bde6
-markup=pango
+markup="pango"
 
 [spotify]
 label=
@@ -77,7 +82,8 @@ interval=5
 command=date '+%A %d.%m %H:%M:%S'
 label=󰃰
 interval=1
-color=#cad3f5
+color=#f4dbd6
+#color=#cad3f5
 
 # Rofi baii
 [shutdown_menu]
@@ -97,116 +103,7 @@ color=#ed8796
 #LOCKSCRIPT=i3lock --color=${BG_COLOR#"#"}
 
 [separator]
-full_text=⠀
+#full_text=⠀
 
 ####################################################################################
 
-# Memory usage
-#
-# The type defaults to "mem" if the instance is not specified.
-[memory]
-label=MEM
-separator=false
-interval=30
-
-[memory]
-label=SWAP
-instance=swap
-separator=false
-interval=30
-
-# Disk usage
-#
-# The directory defaults to $HOME if the instance is not specified.
-# The script may be called with a optional argument to set the alert
-# (defaults to 10 for 10%).
-[disk]
-label=HOME
-#DIR=/mnt/data
-interval=30
-
-# Network interface monitoring
-#
-# If the instance is not specified, use the interface used for default route.
-# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-[iface]
-#IFACE=wlan0
-color=#00FF00
-interval=10
-separator=false
-
-[wifi]
-#INTERFACE=wlp3s0
-label=wifi:
-interval=10
-separator=false
-
-[bandwidth]
-#INTERFACE=eth0
-interval=5
-
-# CPU usage
-#
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
-[cpu_usage]
-label=CPU
-interval=10
-min_width=CPU 100.00%
-#separator=false
-
-[load_average]
-label=LOAD
-interval=10
-
-# Battery indicator
-#
-# The battery instance defaults to 0.
-[battery]
-label=BAT
-#label=⚡
-interval=30
-
-# Generic media player support
-#
-# This displays "ARTIST - SONG" if a music is playing.
-# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
-# Set to %any to automatically pick (Requires playerctl >=2.1.1)
-#[mediaplayer]
-# This picks any player, with vlc as first, and spotify as last choice
-#instance=vlc,%any,spotify
-#interval=5
-#signal=10
-
-# OpenVPN support
-#
-# Support multiple VPN, with colors.
-#[openvpn]
-#interval=20
-
-# Temperature
-#
-# Support multiple chips, though lm-sensors.
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
-#[temperature]
-#label=TEMP
-#interval=10
-
-# Key indicators
-#
-# Add the following bindings to i3 config file:
-#
-# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
-# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-#[keyindicator]
-#KEY=CAPS
-#markup=pango
-#interval=once
-#signal=11
-
-#[keyindicator]
-#KEY=NUM
-#markup=pango
-#interval=once
-#signal=11
