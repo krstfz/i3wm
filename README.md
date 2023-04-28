@@ -3,6 +3,7 @@ i3wm catppuccin setup
 * wm - i3
 * bar - i3blocks
 * spotify - spicetify 
+* launcher - rofi
 
 **Preview**
 
