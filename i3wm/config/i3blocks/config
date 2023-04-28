@@ -1,0 +1,212 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+command=$SCRIPT_DIR/$BLOCK_NAME
+separator_block_width=18
+markup="pango"
+
+####################################################################################
+
+[separator]
+
+[jas]
+command=$SCRIPT_DIR/jas/jas
+color=#eed49f
+label=󰃟
+markup=pango
+interval=once
+signal=10
+#STEP_SIZE=5
+
+[baterkos]
+command=$SCRIPT_DIR/battery/battery
+interval=5
+label= 
+color=#b7bdf8
+
+[volume]
+command=$SCRIPT_DIR/volume/volume
+label=󰕾
+#label=VOL
+interval=5
+signal=10
+color=#f5bde6
+markup=pango
+
+[spotify]
+label=
+command=python3 $SCRIPT_DIR/spotify/spotify.py
+color=#c6a0f6
+interval=5
+
+#[mediaplayer]
+# This picks any player, with vlc as first, and spotify as last choice
+#command=$SCRIPT_DIR/mediaplayer/mediaplayer
+#instance=spotify
+#label=
+#color=#c6a0f6
+#interval=5
+#signal=10
+
+# Date Time
+[time]
+command=date '+%A %d.%m %H:%M:%S'
+label=󰃰
+interval=1
+color=#cad3f5
+
+# Rofi baii
+[shutdown_menu]
+full_text=
+command=$SCRIPT_DIR/shutdown_menu/shutdown_menu
+min_width=16
+color=#ed8796
+#FG_COLOR=#bbbbbb
+#BG_COLOR=#111111
+#HLFG_COLOR=#111111
+#HLBG_COLOR=#bbbbbb
+#BORDER_COLOR=#222222
+#ROFI_TEXT="Menu:"
+#ROFI_OPTIONS=-width 11 -location 3 -hide-scrollbar -bw 2
+#ENABLE_CONFIRMATIONS=true (must be true or false)
+#LAUNCHER=rofi
+#LOCKSCRIPT=i3lock --color=${BG_COLOR#"#"}
+
+[separator]
+full_text=⠀
+
+####################################################################################
+
+# Memory usage
+#
+# The type defaults to "mem" if the instance is not specified.
+[memory]
+label=MEM
+separator=false
+interval=30
+
+[memory]
+label=SWAP
+instance=swap
+separator=false
+interval=30
+
+# Disk usage
+#
+# The directory defaults to $HOME if the instance is not specified.
+# The script may be called with a optional argument to set the alert
+# (defaults to 10 for 10%).
+[disk]
+label=HOME
+#DIR=/mnt/data
+interval=30
+
+# Network interface monitoring
+#
+# If the instance is not specified, use the interface used for default route.
+# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
+[iface]
+#IFACE=wlan0
+color=#00FF00
+interval=10
+separator=false
+
+[wifi]
+#INTERFACE=wlp3s0
+label=wifi:
+interval=10
+separator=false
+
+[bandwidth]
+#INTERFACE=eth0
+interval=5
+
+# CPU usage
+#
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+[cpu_usage]
+label=CPU
+interval=10
+min_width=CPU 100.00%
+#separator=false
+
+[load_average]
+label=LOAD
+interval=10
+
+# Battery indicator
+#
+# The battery instance defaults to 0.
+[battery]
+label=BAT
+#label=⚡
+interval=30
+
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+# Set to %any to automatically pick (Requires playerctl >=2.1.1)
+#[mediaplayer]
+# This picks any player, with vlc as first, and spotify as last choice
+#instance=vlc,%any,spotify
+#interval=5
+#signal=10
+
+# OpenVPN support
+#
+# Support multiple VPN, with colors.
+#[openvpn]
+#interval=20
+
+# Temperature
+#
+# Support multiple chips, though lm-sensors.
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+#[temperature]
+#label=TEMP
+#interval=10
+
+# Key indicators
+#
+# Add the following bindings to i3 config file:
+#
+# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+#[keyindicator]
+#KEY=CAPS
+#markup=pango
+#interval=once
+#signal=11
+
+#[keyindicator]
+#KEY=NUM
+#markup=pango
+#interval=once
+#signal=11
