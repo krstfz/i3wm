@@ -19,7 +19,7 @@ set $gray2              #9DA9A0
 set $red                #E67E80
 set $orange             #E69875
 set $yellow             #DBBC79
-set $green              #A7C080 #B0B070 - bat2#
+set $green              #A7C080 #B0B070 - bat2# - #C7C070#
 set $blue               #7FBBB3
 set $aqua               #83C092
 set $purple             #D699B6
