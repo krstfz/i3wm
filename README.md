@@ -1,4 +1,4 @@
-# i3-cat
+# i3wm
 i3wm catppuccin setup (+ everforest)
 * wm - i3
 * bar - i3blocks
