@@ -211,9 +211,9 @@ bar {
 	separator_symbol ""
 	font pango:JetBrainsMono Nerd Font ExtraBold 12  
 	colors {
-        	background $bg0 
+        	background $bgdim 
         	statusline $fg
-        	separator $purple
+        	separator #e0c0aa 
 
         	###		   border	bg  	   	text
 		focused_workspace  $green	$green		$bg0
@@ -225,9 +225,11 @@ bar {
 
 # AUTOSTART ####################################################################
 exec_always nitrogen --restore
+exec_always picom --experimental-backends &
 exec --no-startup-id exec kitty -e killall plank
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
-
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
 
 # COLORS #######################################################################
 # CATPPUCCIN 
@@ -286,11 +288,10 @@ set $purple     #D699B6
 
 
 # target                 title     	bg    	   text       indicator   brdr
-client.focused           $green     	$green 	   $bg0	      $green	  $green
+client.focused           $green     	$green 	   $bg0	      $fg	  $fg
 #client.focused_inactive $mauve    	$base 	   $text      $rosewater  $mauve
 client.unfocused         $bg0    	$bg1	   $gray2     $bg1	  $bg1
 client.urgent            $red		$red 	   $bg0       $red	  $red
 client.placeholder       $bg1 		$bg0 	   $fg        $bg1   	  $bg1
 client.background        $bg0
-
 
