@@ -65,7 +65,9 @@ signal=10
 command=$SCRIPT_DIR/battery/battery
 interval=10
 label= 
-color=#D3C6AA
+color=#A7C080
+#color=#e0c0aa
+#color=#D3C6AA
 
 #[battery]
 #command=$SCRIPT_DIR/battery/battery
@@ -99,7 +101,7 @@ interval=5
 
 # Date Time
 [time]
-command=date '+%A %d.%m %H:%M:%S'
+command=date '+%A %d.%m. %H:%M:%S'
 label=󰃰
 interval=1
 #color=#f4dbd6
@@ -126,4 +128,3 @@ color=#E67E80
 #full_text=⠀
 
 ####################################################################################
-
