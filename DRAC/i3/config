@@ -217,7 +217,7 @@ bar {
 
         	###		           border	bg  	   	text
 		    focused_workspace  $green	$green		$bg
-        	inactive_workspace $bg1		$bg1		$fg
+        	inactive_workspace $bg1		$bg1		#BFBFBF
         	urgent_workspace   $red		$red		$bg
         	}
 }
@@ -245,6 +245,7 @@ set $red		#ff5555
 set $yellow		#f1fa8c
 
 ###grayish-fg			#c7c7c3 ###
+###grayish-fg-alt       #BFBFBF ###
 ###greenish-bat 		#97fa50 ###
 ###separator-orange		#fadbb9 ###
 
