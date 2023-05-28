@@ -1,0 +1,42 @@
+############## DRACULA ############
+set $bg			#282a36
+set $bg1		#44475a
+set $bg2		#6272a4
+set $fg			#f8f8f2		
+set $cyan		#8be9fd
+set $green		#50fa7b     
+set $orange		#ffb86c		
+set $pink		#ff79c6
+set $purple		#bd93f9
+set $red		#ff5555
+set $yellow		#f1fa8c
+set $aqua		#50fab3
+
+###grayish-fg			#c7c7c3 ###
+###grayish-fg-alt       #BFBFBF ###
+###greenish-bat 		#97fa50 ###
+###separator-orange		#fadbb9 ###
+
+
+##### PANEL #####
+
+colors {
+        	background $bg 
+        	statusline $fg
+        	separator #fadbb9 
+
+        	###		           border	bg  	   	text
+		    focused_workspace  $green	$green		$bg
+        	inactive_workspace $bg1		$bg1		$fg
+        	urgent_workspace   $red		$red		$bg
+        	}
+
+
+#### WINDOWS #####
+
+# target                 title     	bg    	   text       indicator   brdr
+client.focused           $green    	$green 	   $bg	      $fg	        $fg
+client.unfocused         $bg    	$bg	       $bg2       $bg	        $bg
+client.urgent            $red		$red 	   $bg1       $red	        $red
+client.placeholder       $bg1 		$bg 	   $fg        $bg1   	    $bg1
+client.background        $bg
