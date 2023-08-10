@@ -39,6 +39,16 @@ interval=30
 color=#9DA9A0
 #color=#6272a4
 
+[temperature]
+command=$SCRIPT_DIR/temperature/temperature
+label=
+#color=#e8ffb3
+color=#9de0b2
+interval=10
+#T_WARN=70
+#T_CRIT=90
+#SENSOR_CHIP=""
+
 [cpu_usage]
 command=$SCRIPT_DIR/cpu_usage/cpu_usage
 interval=10
@@ -75,6 +85,12 @@ color=#50fa7b
 #markup=pango
 #interval=once
 
+[spotify]
+label=
+command=python3 $SCRIPT_DIR/spotify/spotify.py
+color=#50fab0
+interval=5
+
 [volume]
 command=$SCRIPT_DIR/volume/volume
 label=󰕾
@@ -83,12 +99,6 @@ interval=5
 signal=10
 color=#ff79c6
 markup=pango
-
-[spotify]
-label=
-command=python3 $SCRIPT_DIR/spotify/spotify.py
-color=#bd93f9
-interval=5
 
 #[mediaplayer]
 # This picks any player, with vlc as first, and spotify as last choice
@@ -128,4 +138,3 @@ color=#ff5555
 #full_text=⠀
 
 ####################################################################################
-
