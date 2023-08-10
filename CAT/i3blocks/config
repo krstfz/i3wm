@@ -75,6 +75,12 @@ color=#a6da95
 #markup=pango
 #interval=once
 
+[spotify]
+label=
+command=python3 $SCRIPT_DIR/spotify/spotify.py
+color=#95daad
+interval=5
+
 [volume]
 command=$SCRIPT_DIR/volume/volume
 label=󰕾
@@ -83,12 +89,6 @@ interval=5
 signal=10
 color=#f5bde6
 markup=pango
-
-[spotify]
-label=
-command=python3 $SCRIPT_DIR/spotify/spotify.py
-color=#95daad
-interval=5
 
 #[mediaplayer]
 # This picks any player, with vlc as first, and spotify as last choice
