@@ -111,6 +111,7 @@ bindsym $mod+f floating toggle
 
 # toggle floating for specific windows
 for_window [class="Gnome-screenshot"] floating enable
+for_window [class="Blueman-manager"] floating enable
 #for_window [class="firefox"] border pixel 0
 
 # change focus between tiling / floating windows
@@ -173,7 +174,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Control+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "rofi -show power-menu -modi power-menu:rofi-power-menu -theme-str 'window {width: 16em;} listview {lines: 6;}'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
