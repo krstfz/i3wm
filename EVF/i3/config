@@ -111,6 +111,7 @@ bindsym $mod+f floating toggle
 
 # toggle floating for specific windows
 for_window [class="Gnome-screenshot"] floating enable
+for_window [class="Blueman-manager"] floating enable
 #for_window [class="firefox"] border pixel 0
 
 # change focus between tiling / floating windows
@@ -173,7 +174,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Control+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "rofi -show power-menu -modi power-menu:rofi-power-menu -theme-str 'window {width: 16em;} listview {lines: 6;}'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -217,8 +218,8 @@ bar {
 
         	###		   border	bg  	   	text
 		focused_workspace  $green	$green		$bg0
-        	#active_workspace   $yellow	$yellow		$text	
-        	inactive_workspace $bg1		$bg1		$bg4
+        	#active_workspace  $yellow	$yellow		$text	
+        	inactive_workspace $bg1		$bg1		$gray0
         	urgent_workspace   $red		$red		$bg0
         	}
 }
@@ -230,35 +231,6 @@ exec --no-startup-id exec kitty -e killall plank
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
-
-# COLORS #######################################################################
-# CATPPUCCIN 
-#set $rosewater #f4dbd6
-#set $flamingo  #f0c6c6
-#set $pink      #f5bde6
-#set $mauve     #c6a0f6
-#set $red       #ed8796
-#set $maroon    #ee99a0
-#set $peach     #f5a97f
-#set $yellow    #eed49f	
-#set $green     #a6da95
-#set $teal      #8bd5ca
-#set $sky       #91d7e3
-#set $sapphire  #7dc4e4
-#set $blue      #8aadf4
-#set $lavender  #b7bdf8
-#set $text      #cad3f5
-#set $subtext1  #b8c0e0
-#set $subtext0  #a5adcb
-#set $overlay2  #939ab7
-#set $overlay1  #8087a2
-#set $overlay0  #6e738d
-#set $surface2  #5b6078
-#set $surface1  #494d64
-#set $surface0  #363a4f
-#set $base      #24273a
-#set $mantle    #1e2030
-#set $crust     #181926
 
 ######################### EVERFOREST MEDIUM  ######################### 
 
@@ -288,10 +260,8 @@ set $purple     #D699B6
 
 
 # target                 title     	bg    	   text       indicator   brdr
-client.focused           $green     	$green 	   $bg0	      $fg	  $fg
-#client.focused_inactive $mauve    	$base 	   $text      $rosewater  $mauve
+client.focused           $green     	$green 	   $bg0	      $bg5	  $bg5
 client.unfocused         $bg0    	$bg1	   $gray2     $bg1	  $bg1
 client.urgent            $red		$red 	   $bg0       $red	  $red
 client.placeholder       $bg1 		$bg0 	   $fg        $bg1   	  $bg1
 client.background        $bg0
-
