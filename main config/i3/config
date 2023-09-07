@@ -45,6 +45,10 @@ exec --no-startup-id nm-applet
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks 
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute "alsa_input.pci-0000_07_00.6.HiFi__hw_acp__source" toggle && pkill -RTMIN+10 i3blocks
+
+# open sound control panel
+bindsym $mod+p exec pavucontrol
 
 # Brightness control using brightnessctl
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% && pkill -RTMIN+10 i3blocks 
@@ -176,6 +180,9 @@ bindsym $mod+Control+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "rofi -show power-menu -modi power-menu:rofi-power-menu -theme-str 'window {width: 16em;} listview {lines: 6;}'"
 
+# file managerino
+bindsym $mod+Control+e exec "nemo"
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -211,9 +218,8 @@ bar {
 	tray_padding 4
 	separator_symbol ""
 	font pango:JetBrainsMono Nerd Font ExtraBold 12  
-	colors {
-        	THEME
-        	}
+	
+	THEME
 }
 
 # AUTOSTART ####################################################################
@@ -225,4 +231,3 @@ exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 
 THEME
-
