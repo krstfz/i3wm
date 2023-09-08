@@ -14,7 +14,7 @@ elif [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
 brightnessctl s 10%-
 fi >/dev/null 2>&1
 
-URGENT_VALUE=10
+URGENT_VALUE=1
 
 if [[ "${METHOD}" = "xrandr" ]]; then
   device="${BLOCK_INSTANCE:-primary}"
