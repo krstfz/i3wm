@@ -24,7 +24,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    width = 0
 
     # The maximum height of a single notification, excluding the frame.
     height = 300
@@ -33,7 +33,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 10x60
+    offset = 20x60
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -127,7 +127,7 @@
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
-    line_height = 0
+    line_height = 1
 
     # Possible values are:
     # full: Allow a small subset of html markup in notifications:
@@ -167,11 +167,11 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = left
+    alignment = center
 
     # Vertical alignment of message text and icon.
     # Possible values are "top", "center" and "bottom".
-    vertical_alignment = center
+    vertical_alignment = center 
 
     # Show age of message if message is older than show_age_threshold
     # seconds.
@@ -211,7 +211,7 @@
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
     # max_icon_size takes precedence over this.
-    min_icon_size = 32
+    min_icon_size = 22
 
     # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 128
@@ -324,8 +324,8 @@
 [urgency_normal]
     background = "#232A2E"
     foreground = "#D3C6AA" #bejsikFG#
-    timeout = 10
     highlight = "#A7C080"
+    timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
 
