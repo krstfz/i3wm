@@ -9,13 +9,12 @@ bar {
 	separator_symbol ""
 	font pango:JetBrainsMono Nerd Font ExtraBold 12  
 	colors {
-                background $crust
+                background $base
                 statusline $text
-                separator $rosewater
+                separator  $rosewater
 
                 ###                border       bg              text
-                focused_workspace  $blue        $blue           $base
-                #active_workspace   $yellow     $yellow         $text   
+                focused_workspace  $lavender    $lavender       $base
                 inactive_workspace $surface0    $surface0       $overlay0
                 urgent_workspace   $red         $red            $base
                 }
@@ -29,7 +28,7 @@ set $mauve     #c6a0f6
 set $red       #ed8796
 set $maroon    #ee99a0
 set $peach     #f5a97f
-set $yellow    #eed49f	
+set $yellow    #eed49f  
 set $green     #a6da95
 set $teal      #8bd5ca
 set $sky       #91d7e3
@@ -49,10 +48,8 @@ set $base      #24273a
 set $mantle    #1e2030
 set $crust     #181926
 
-
 # target                 title          bg         text       indicator   brdr
-client.focused           $blue          $blue      $base      $blue       $blue
-#client.focused_inactive $mauve         $base      $text      $rosewater  $mauve
+client.focused           $lavender      $lavender  $base      $surface1   $surface1
 client.unfocused         $base          $surface0  $overlay2  $surface0   $surface0
 client.urgent            $red           $red       $base      $red        $red
 client.placeholder       $overlay0      $base      $text      $overlay0   $overlay0
