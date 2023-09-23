@@ -37,7 +37,17 @@ command=$SCRIPT_DIR/memory/memory
 label=󰍛
 interval=30
 color=#939ab7
-#color=#6272a4
+#color=#7dc4e4
+
+[temperature]
+command=$SCRIPT_DIR/temperature/temperature
+label=
+#color=#e8ffb3
+color=#91d7e3
+interval=10
+#T_WARN=70
+#T_CRIT=90
+#SENSOR_CHIP=""
 
 [cpu_usage]
 command=$SCRIPT_DIR/cpu_usage/cpu_usage
@@ -78,14 +88,14 @@ color=#a6da95
 [spotify]
 label=
 command=python3 $SCRIPT_DIR/spotify/spotify.py
-color=#95daad
+color=#8bd5ca
 interval=5
 
 [volume]
 command=$SCRIPT_DIR/volume/volume
 label=󰕾
 #label=VOL
-interval=5
+interval=1
 signal=10
 color=#f5bde6
 markup=pango
@@ -104,7 +114,7 @@ markup=pango
 command=date '+%A %d.%m. %H:%M:%S'
 label=󰃰
 interval=1
-#color=#d5c4a1
+#color=#f4dbd6
 color=#cad3f5
 
 # Rofi baii
@@ -128,4 +138,3 @@ color=#ed8796
 #full_text=⠀
 
 ####################################################################################
-
