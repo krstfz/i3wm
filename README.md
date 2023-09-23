@@ -8,7 +8,7 @@ i3wm catppuccin setup (+ everforest // dracula // gruvbox // nord)
 
 **Preview**
 
-![obrazek](https://user-images.githubusercontent.com/126676125/235241915-0e67b406-dfc5-4e5f-af87-2f63815c374b.png)
+![image](https://github.com/krstfz/i3wm/assets/126676125/6b8cfbbc-b524-45ef-ade5-f76a90746004)
 
 ![everforest2](https://user-images.githubusercontent.com/126676125/235354947-ac0db0e8-f42d-4dd9-a276-a37e89c33877.png)
 
