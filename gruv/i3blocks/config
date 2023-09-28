@@ -37,7 +37,17 @@ command=$SCRIPT_DIR/memory/memory
 label=󰍛
 interval=30
 color=#bdae93
-#color=#6272a4
+#color=#7dc4e4
+
+[temperature]
+command=$SCRIPT_DIR/temperature/temperature
+label=
+#color=#e8ffb3
+color=#7cc0aa
+interval=10
+#T_WARN=70
+#T_CRIT=90
+#SENSOR_CHIP=""
 
 [cpu_usage]
 command=$SCRIPT_DIR/cpu_usage/cpu_usage
@@ -85,7 +95,7 @@ interval=5
 command=$SCRIPT_DIR/volume/volume
 label=󰕾
 #label=VOL
-interval=5
+interval=1
 signal=10
 color=#d3869b
 markup=pango
@@ -104,7 +114,7 @@ markup=pango
 command=date '+%A %d.%m. %H:%M:%S'
 label=󰃰
 interval=1
-#color=#d5c4a1
+#color=#f4dbd6
 color=#ebdbb2
 
 # Rofi baii
@@ -128,4 +138,3 @@ color=#fb4934
 #full_text=⠀
 
 ####################################################################################
-
