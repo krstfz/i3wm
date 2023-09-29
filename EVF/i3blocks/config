@@ -39,6 +39,16 @@ interval=30
 color=#9DA9A0
 #color=#7dc4e4
 
+[temperature]
+command=$SCRIPT_DIR/temperature/temperature
+label=
+#color=#e8ffb3
+color=#83c0b2
+interval=10
+#T_WARN=70
+#T_CRIT=90
+#SENSOR_CHIP=""
+
 [cpu_usage]
 command=$SCRIPT_DIR/cpu_usage/cpu_usage
 interval=10
@@ -85,7 +95,7 @@ interval=5
 command=$SCRIPT_DIR/volume/volume
 label=󰕾
 #label=VOL
-interval=5
+interval=1
 signal=10
 color=#D699B6
 markup=pango
