@@ -1,4 +1,4 @@
-###############GRUVBOX ################
+############### GRUVBOX ################
 set $bgdim 	        #1d2021
 set $bg0 	        #282828
 set $bg1 	        #3c3836
@@ -11,7 +11,8 @@ set $bg_green	   	#98971a
 set $bg_blue	   	#458588
 set $bg_purple		#b16286
 set $bg_aqua		#689d6a
-set $bg_orange		#d67d0e
+set $bg_orange		#d65d0e
+set $bg_gray        	#a89984
 set $fg		        #ebdbb2
 set $gray	        #928374
 set $lg_fg	        #fbf1c7
@@ -20,7 +21,7 @@ set $fg3		#bdae93
 set $fg4		#a89984
 set $red	        #fb4934
 set $orange	        #fe8019     #fed019
-set $yellow	        #fadb2f
+set $yellow	        #fabd2f
 set $green	        #b8bb26
 set $blue	        #83a598
 set $aqua	        #8ec07c
