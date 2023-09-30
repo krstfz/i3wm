@@ -60,10 +60,10 @@ print "$temperature°C\n" x2;
 
 # Print color, if needed
 if ($temperature >= $t_crit) {
-    print "#E67E80\n";
+    print "#bf616a\n";
     exit 33;
 } elsif ($temperature >= $t_warn) {
-    print "#E69875\n";
+    print "#d08770\n";
 }
 
 exit 0;
