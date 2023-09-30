@@ -1,5 +1,5 @@
 # i3wm
-i3wm catppuccin setup (+ everforest // dracula // gruvbox // nord)
+i3wm catppuccin setup (+ everforest // dracula // gruvbox // nord // solarized)
 * wm - i3
 * bar - i3blocks
 * spotify - spicetify 
@@ -19,6 +19,8 @@ i3wm catppuccin setup (+ everforest // dracula // gruvbox // nord)
 ![image](https://github.com/krstfz/i3wm/assets/126676125/7bd15f01-2042-48cd-9ac8-f56849965001)
 
 ![image](https://github.com/krstfz/i3wm/assets/126676125/199986e8-d15a-4de6-9f5b-391e20fc7c9a)
+
+![image](https://github.com/krstfz/i3wm/assets/126676125/93c58a39-41fb-4fc6-a4f3-2d329e8771f3)
 
 
 
