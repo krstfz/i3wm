@@ -14,10 +14,10 @@ bar {
                 statusline $fg
                 separator #ebae8b 
 
-                ###                border       bg              text
-                focused_workspace  $blue        $blue          	$bg
-                inactive_workspace $bg2         $bg2            $fg
-                urgent_workspace   $red         $red            $bg
+                ###                border       bg          text
+                focused_workspace  $red	    	$red	    $bg
+                inactive_workspace $bg2         $bg2        $fg
+                urgent_workspace   $purple      $purple     $bg
                 }
 }
 
@@ -54,8 +54,8 @@ set $pink               #d088a6
 #BAT-ALT                #bcbe8c
 
 # target                 title          bg         text       indicator   brdr
-client.focused           $blue          $blue      $bg        $bg2        $bg2
-client.unfocused         $bg            $bg        $bg3       $bg         $bg
-client.urgent            $red           $red       $bg2       $red        $red
+client.focused           $red           $red       $bg        $bg2        $bg2
+client.unfocused         $bg3           $bg3       $bg        $bg         $bg
+client.urgent            $purple        $purple    $bg2       $purple     $purple
 client.placeholder       $bg2           $bg        $fg        $bg2        $bg2
 client.background        $bg 
