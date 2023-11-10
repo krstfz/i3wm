@@ -33,6 +33,7 @@ set $pink		#ff79c6
 set $purple		#bd93f9
 set $red		#ff5555
 set $yellow		#f1fa8c
+set $gray       	#b8b8b4
 
 ###grayish-fg			#c7c7c3 ###
 ###grayish-fg-alt       #BFBFBF ###
