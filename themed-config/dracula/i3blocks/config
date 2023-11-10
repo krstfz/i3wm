@@ -36,7 +36,7 @@ markup="pango"
 command=$SCRIPT_DIR/memory/memory
 label=󰍛
 interval=30
-color=#9DA9A0
+color=#9c9c9c
 
 [temperature]
 command=$SCRIPT_DIR/temperature/temperature
