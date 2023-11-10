@@ -38,6 +38,7 @@ set $yellow		#f1fa8c
 ###grayish-fg-alt       #BFBFBF ###
 ###greenish-bat 		#97fa50 ###
 ###separator-orange		#fadbb9 ###
+### vim				#323542 ###
 
 
 # target                 title     	bg    	   text       indicator   brdr
