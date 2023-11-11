@@ -27,8 +27,8 @@ colors {
         	separator #fadbb9 
 
         	###	           border	bg  	   	text
-		focused_workspace  $purple	$purple		$bg
-        	inactive_workspace $bg1		$bg1		$fg
+	        focused_workspace  $green	$green		$bg
+        	inactive_workspace $bg1		$bg1		#BFBFBF
         	urgent_workspace   $red		$red		$bg
         	}
 
@@ -36,7 +36,7 @@ colors {
 #### WINDOWS #####
 
 # target                 title     	bg    	   text       indicator     brdr
-client.focused           $green    	$green 	   $bg	      $fg	    $fg
+client.focused           $green    	$green	   $bg	      $bg1	    $bg1
 client.unfocused         $bg    	$bg	   $bg2       $bg	    $bg
 client.urgent            $red		$red 	   $bg1       $red	    $red
 client.placeholder       $bg1 		$bg 	   $fg        $bg1   	    $bg1
