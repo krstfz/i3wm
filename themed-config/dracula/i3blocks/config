@@ -84,7 +84,7 @@ interval=5
 [volume]
 command=$SCRIPT_DIR/volume/volume
 label=󰕾
-interval=5
+interval=1
 signal=10
 color=#ff79c6
 markup=pango
@@ -103,7 +103,7 @@ markup=pango
 command=date '+%A %d.%m. %H:%M:%S'
 label=󰃰
 interval=1
-color=#c7c7c3
+color=#f8f8f2
 
 # Rofi baii
 [shutdown_menu]
