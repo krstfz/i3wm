@@ -16,7 +16,7 @@ bar {
 
                 ###                border       bg          text
                 focused_workspace  $red	    	$red	    $bg
-                inactive_workspace $bg2         $bg2        $fg
+                inactive_workspace $bg2         $bg2        $gray
                 urgent_workspace   $purple      $purple     $bg
                 }
 }
