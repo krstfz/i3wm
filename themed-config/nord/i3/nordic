@@ -23,19 +23,20 @@ set $pink               #d088a6
 #BAT-ALT                #bcbe8c
 
 # target                 title          bg         text       indicator   brdr
-client.focused           $red	        $red       $bg        $bg2        $bg2
-client.unfocused         $bg            $bg        $bg3       $bg         $bg
-client.urgent            $yellow        $yellow    $bg2       $yellow     $yellow
+client.focused           $red           $red       $bg        $bg3        $bg3
+client.unfocused         $bg3           $bg3       $bg        $bg         $bg
+client.urgent            $purple        $purple    $bg2       $purple     $purple
 client.placeholder       $bg2           $bg        $fg        $bg2        $bg2
 client.background        $bg 
+
 
 colors {
                 background $bg 
                 statusline $fg
-                separator #ebae8b 
+                separator  $gray 
 
-                ###                border       bg        text
-                focused_workspace  $red		      $red		  $bg
-                inactive_workspace $bg2         $bg2      $fg
-                urgent_workspace   $yellow      $yellow		$bg
+                ###                border       bg          text
+                focused_workspace  $red	    	$red	    $bg
+                inactive_workspace $bg2         $bg2        $gray
+                urgent_workspace   $purple      $purple     $bg
                 }
