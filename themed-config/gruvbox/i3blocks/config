@@ -41,7 +41,7 @@ color=#bdae93
 [temperature]
 command=$SCRIPT_DIR/temperature/temperature
 label=
-color=#7cc0aa
+color=#84a583
 interval=10
 #T_WARN=70
 #T_CRIT=90
