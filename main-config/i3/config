@@ -124,11 +124,17 @@ for_window [class="Gnome-screenshot"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="steam"] floating enable
 for_window [class="MintUpdate.py"] floating enable
+for_window [class="App.py"] floating enable
 
 #for_window [class="firefox"] border pixel 0
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+
+# GAPS
+gaps inner 5px
+gaps outer 5px
+smart_gaps on
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -137,7 +143,8 @@ bindsym $mod+a focus parent
 title_align center
 
 # Activate smart borders (always)
-#smart_borders on
+smart_borders on
+default_border normal 4
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -235,7 +242,7 @@ bar {
                 ###                border       bg          text
                 focused_workspace  $red	    	$red	    $bg
                 inactive_workspace $bg2         $bg2        $gray
-                urgent_workspace   $purple      $purple     $bg
+                urgent_workspace   $yellow	$yellow     $bg
                 }
 }
 
@@ -247,33 +254,4 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 
-####################### NORD THEME ##########################i                        
-
-set $bg                 #2e3440
-set $bg1                #3b4252
-set $bg2                #434c5e
-set $bg3                #4c566a
-set $fg                 #eceff4
-set $fg_alt             #e5e9f0         
-set $bluyen             #88c0d0
-set $cyan               #8fbcbb
-set $blue               #5e81ac
-set $gray               #d8dee9
-set $green              #a3be8c     
-set $orange             #d08770         
-set $purple             #b48ead
-set $red                #bf616a
-set $yellow             #ebcb8b
-set $aqua               #8cbe94
-set $pink               #d088a6
-
-
-#SEPARATOR              #ebae8b
-#BAT-ALT                #bcbe8c
-
-# target                 title          bg         text       indicator   brdr
-client.focused           $red           $red       $bg        $bg3        $bg3
-client.unfocused         $bg3           $bg3       $bg        $bg         $bg
-client.urgent            $purple        $purple    $bg2       $purple     $purple
-client.placeholder       $bg2           $bg        $fg        $bg2        $bg2
-client.background        $bg 
+####################### NORD THEME ##########################
