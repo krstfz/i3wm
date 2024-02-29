@@ -1,27 +1,45 @@
 ######################### EVERFOREST MEDIUM  ######################### 
 
-set $bgdim              #232A2E
-set $bg0                #2D353B
-set $bg1                #343F44
-set $bg2                #3D474D
-set $bg3                #475258
-set $bg4                #4F585E
-set $bg5                #56635F
-set $bg_red             #543A48
-set $bg_visual          #513045
-set $bg_yellow          #4D4C43
-set $bg_green           #425047
-set $bg_blue            #3A515D
-set $fg                 #D3C6AA #e0c0aa - whiteish#
-set $gray0              #7A8478
-set $gray1              #859289
-set $gray2              #9DA9A0
-set $red                #E67E80 #ae5e5e - alt-red (darkbg)
-set $orange             #E69875
-set $yellow             #DBBC79
-set $green              #A7C080 #B0B070 - bat2# - #C7C070#
-set $blue               #7FBBB3
-set $aqua               #83C092
-set $purple             #D699B6
+set $bgdim      #232A2E
+set $bg0        #2D353B
+set $bg1        #343F44
+set $bg2        #3D474D
+set $bg3        #475258
+set $bg4        #4F585E
+set $bg5        #56635F
+set $bg_red     #543A48
+set $bg_visual  #513045
+set $bg_yellow  #4D4C43
+set $bg_green   #425047
+set $bg_blue    #3A515D
+set $fg         #D3C6AA
+set $gray0      #7A8478
+set $gray1      #859289
+set $gray2      #9DA9A0
+set $red        #E67E80
+set $orange     #E69875
+set $yellow     #DBBC79
+set $green      #A7C080
+set $blue       #7FBBB3
+set $aqua       #83C092
+set $purple     #D699B6
 
 
+# target                 title     	bg    	   text       indicator   brdr
+client.focused           $green     	$green 	   $bg0	      $green	  $green
+client.unfocused         $bg0    	$bg1	   $gray2     $bg1	  $bg1
+client.urgent            $red		$red 	   $bg0       $red	  $red
+client.placeholder       $bg1 		$bg0 	   $fg        $bg1   	  $bg1
+client.background        $bg0
+
+colors {
+        	background $bgdim 
+        	statusline $fg
+        	separator #e0c0aa 
+
+        	###		   border	bg  	   	text
+		focused_workspace  $green	$green		$bg0
+        	#active_workspace  $yellow	$yellow		$text	
+        	inactive_workspace $bg1		$bg1		$gray0
+        	urgent_workspace   $red		$red		$bg0
+        	}
