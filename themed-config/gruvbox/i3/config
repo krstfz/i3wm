@@ -1,14 +1,14 @@
 colors {
-        	background $bg0
-        	statusline $fg
+        	background $bgdim 
+        	statusline $fg 
         	separator  $fg4
 
-        	###		           border	    bg  	   	text
-		    focused_workspace  $purple  	$purple 	$bg0
-        	inactive_workspace $bg1		    $bg1		$gray
-        	urgent_workspace   $red		    $red		$bg0
+        	###		   border	bg  	   	text
+		focused_workspace  $bg_aqua	$bg_aqua	$bgdim
+        	#active_workspace  $yellow	$yellow		$text	
+        	inactive_workspace $bg1		$bg1		$bg4
+        	urgent_workspace   $red		$red		$bgdim
         	}
-
 
 ############### GRUVBOX ################
 set $bgdim 	        #1d2021
@@ -40,8 +40,8 @@ set $aqua	        #8ec07c
 set $purple	        #d3869b
 
 
-# target                 title     	    bg    	    text       indicator    brdr
-client.focused           $purple        $purple 	$bg0	   $bg1	        $bg1
-client.unfocused         $bg0    	    $bg0        $bg3       $bg0	        $bg0
+# target                 title     	    bg    	    text       indicator        brdr
+client.focused           $bg_aqua           $bg_aqua 	    $bg0       $bg_aqua	        $bg_aqua
+client.unfocused         $bg0    	    $bg0            $bg3       $bg0	        $bg0
 client.urgent            $red		    $red 	    $bg1       $red	        $red
 client.background        $bg0
