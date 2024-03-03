@@ -17,7 +17,7 @@ my $t_crit = $ENV{T_CRIT} // 80;
 my $cpu_usage = -1;
 my $decimals = $ENV{DECIMALS} // 2;
 my $label = $ENV{LABEL} // "";
-my $color_normal = $ENV{COLOR_NORMAL} // "#83a598";
+my $color_normal = $ENV{COLOR_NORMAL} // "#458588";
 my $color_warn = $ENV{COLOR_WARN} // "#fe8019";
 my $color_crit = $ENV{COLOR_CRIT} // "#fb4934";
 
