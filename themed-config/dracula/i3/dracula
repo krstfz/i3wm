@@ -18,6 +18,7 @@ set $gray       	#b8b8b4
 ###greenish-bat 		#97fa50 ###
 ###separator-orange		#fadbb9 ###
 ### vim				#323542 ###
+### bg_dark                     #21222C ###
 
 ##### PANEL #####
 
