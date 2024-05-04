@@ -1,0 +1,118 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+command=$SCRIPT_DIR/$BLOCK_NAME
+separator_block_width=18
+markup="pango"
+
+
+######################################################################################
+
+[memory]
+command=$SCRIPT_DIR/memory/memory
+label=󰍛
+interval=30
+color=#9c9c9c
+
+[temperature]
+command=$SCRIPT_DIR/temperature/temperature
+label=
+color=#8bfddb
+interval=10
+#T_WARN=70
+#T_CRIT=90
+#SENSOR_CHIP=""
+
+[cpu_usage]
+command=$SCRIPT_DIR/cpu_usage/cpu_usage
+interval=10
+label=
+#color=#8bd5ca
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+#COLOR_NORMAL=#EBDBB2
+#COLOR_WARN=#FFFC00
+#COLOR_CRIT=#FF0000
+
+[jas]
+command=$SCRIPT_DIR/jas/jas
+color=#f1fa8c
+label=󰃟
+markup="pango"
+interval=once
+signal=10
+#STEP_SIZE=5
+
+[baterkos]
+command=$SCRIPT_DIR/battery/battery
+interval=10
+label= 
+color=#50fa7b
+
+[spotify]
+label=
+command=python3 $SCRIPT_DIR/spotify/spotify.py
+color=#50fab0
+interval=5
+
+[volume]
+command=$SCRIPT_DIR/volume/volume
+label=󰕾
+interval=1
+signal=10
+color=#ff79c6
+markup=pango
+
+#[mediaplayer]
+# This picks any player, with vlc as first, and spotify as last choice
+#command=$SCRIPT_DIR/mediaplayer/mediaplayer
+#instance=spotify
+#label=
+#color=#c6a0f6
+#interval=5
+#signal=10
+
+# Date Time
+[time]
+command=date '+%A %d.%m. %H:%M:%S'
+label=󰃰
+interval=1
+color=#f8f8f2
+
+# Rofi baii
+[shutdown_menu]
+full_text=
+command=$SCRIPT_DIR/shutdown_menu/shutdown_menu
+min_width=16
+color=#ff5555
+
+[separator]
+#full_text=⠀
+
+####################################################################################
