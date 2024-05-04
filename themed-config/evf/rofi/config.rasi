@@ -1,0 +1,18 @@
+configuration{
+	modi: "run,drun,window";
+	icon-theme: "Papirus";
+	show-icons: true;
+	terminal: "kitty";
+	drun-display-format: "{icon} {name}";
+	location: 0;
+	disable-history: false;
+	display-drun: " 󰀻  Apps ";
+	display-run: "   Run ";
+	display-window: " 﩯  Window";
+	display-filebrowser: "   Files";
+	sidebar-mode: true;
+
+}
+
+
+@theme "/home/krstfz/.config/rofi/themes/everforest"
