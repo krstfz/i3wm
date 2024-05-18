@@ -125,6 +125,7 @@ for_window [class="Blueman-manager"] floating enable
 for_window [class="steam"] floating enable
 for_window [class="MintUpdate.py"] floating enable
 for_window [class="App.py"] floating enable
+for_window [class="smile"] floating enable
 
 #for_window [class="firefox"] border pixel 0
 
@@ -145,6 +146,11 @@ title_align center
 # Activate smart borders (always)
 smart_borders on
 default_border normal 4
+
+#Hide window title bar
+#default_border pixel 1
+#default_floating_border pixel 1
+#for_window [class="^.*"] border pixel 4
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -199,6 +205,9 @@ bindsym $mod+Shift+e exec "rofi -show power-menu -modi power-menu:rofi-power-men
 # file managerino
 bindsym $mod+Control+e exec "nemo"
 
+# smile jako emoji pickerino
+bindsym $mod+period exec "flatpak run it.mijorus.smile"
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -235,15 +244,16 @@ bar {
 	separator_symbol ""
 	font pango:JetBrainsMono Nerd Font ExtraBold 12  
 	colors {
-                background $bg 
-                statusline $fg
-                separator  $gray 
+        	background $bgdim 
+        	statusline #fcf6dd
+        	separator  $fg4
 
-                ###                border       bg          text
-                focused_workspace  $red	    	$red	    $bg
-                inactive_workspace $bg2         $bg2        $gray
-                urgent_workspace   $yellow	$yellow     $bg
-                }
+        	###		   border	bg  	   	text
+		focused_workspace  $bg_aqua	$bg_aqua	$bgdim
+        	#active_workspace  $yellow	$yellow		$text	
+        	inactive_workspace $bg1		$bg1		$bg4
+        	urgent_workspace   $red		$red		$bgdim
+        	}
 }
 
 # AUTOSTART ####################################################################
@@ -254,4 +264,4 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 
-####################### NORD THEME ##########################
+# THEME HERE #
