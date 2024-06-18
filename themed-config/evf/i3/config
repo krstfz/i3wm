@@ -280,7 +280,7 @@ set $gray1      #859289
 set $gray2      #9DA9A0
 set $red        #E67E80
 set $orange     #E69875
-set $yellow     #DBBC79
+set $yellow     #DBBC7F
 set $green      #A7C080
 set $blue       #7FBBB3
 set $aqua       #83C092
