@@ -245,7 +245,7 @@ bar {
         	separator #e0c0aa 
 
         	###		   border	bg  	   	text
-		focused_workspace  $blue	$blue		$bgdim
+		focused_workspace  $green	$green		$bgdim
         	#active_workspace  $yellow	$yellow		$text	
         	inactive_workspace $bg1		$bg1		$gray0
         	urgent_workspace   $red		$red		$bgdim
@@ -290,9 +290,8 @@ set $purple     #D699B6
 
 
 # target                 title     	bg    	   text       indicator   brdr
-client.focused           $blue		$blue 	   $bg0	      $blue	  $blue
+client.focused           $green		$green 	   $bg0	      $green	  $green
 client.unfocused         $bg0    	$bg1	   $gray2     $bg1	  $bg1
 client.urgent            $red		$red 	   $bg0       $red	  $red
 client.placeholder       $bg1 		$bg0 	   $fg        $bg1   	  $bg1
 client.background        $bg0
-
