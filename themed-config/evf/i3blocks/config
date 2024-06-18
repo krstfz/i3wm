@@ -62,7 +62,7 @@ label=
 
 [jas]
 command=$SCRIPT_DIR/jas/jas
-color=#DBBC79
+color=#DBBC7F
 label=󰃟
 markup="pango"
 interval=once
