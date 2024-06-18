@@ -67,7 +67,7 @@ END {
 	} else if (pct > 80) {
 		print("#E69875")
 	} else if (pct > 70) {
-		print("#DBBC79")
+		print("#DBBC7F")
 	}
 }
 ' /proc/meminfo
