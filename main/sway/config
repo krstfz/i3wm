@@ -1,0 +1,278 @@
+# Default config for sway
+#
+# Copy this to ~/.config/sway/config and edit it to your liking.
+#
+# Read `man 5 sway` for a complete reference.
+
+##################################################################################################################
+################################################## CUSTOM STUFF & KEYS ###########################################
+##################################################################################################################
+set $mod Mod4
+
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Customizationis starts here
+font pango:JetBrainsMono Nerd Font ExtraBold 12
+title_align center
+
+# Gaps (NOPE)
+gaps inner 5px
+gaps outer 5px
+smart_gaps on
+smart_borders on
+default_border normal 4
+titlebar_border_thickness 0
+titlebar_padding 1
+
+# Kitty
+set $term /home/krstfz/.local/kitty.app/bin/kitty
+
+# file managerino
+bindsym $mod+Control+e exec "nemo"
+
+# Rofi power menu
+bindsym $mod+Shift+e exec "rofi -show power-menu -modi power-menu:~/.local/bin/./rofi-power-menu -theme-str 'window {width: 16em;} listview {lines: 6;}'"
+
+# Rofi
+bindsym $mod+d exec rofi run -show drun
+
+# DUNST VOLUME (nefunguje ale notifikace)
+bindsym XF86AudioRaiseVolume exec --no-startup-id /home/krstfz/.config/dunst/volume_brightness.sh volume_up
+bindsym XF86AudioLowerVolume exec --no-startup-id /home/krstfz/.config/dunst/volume_brightness.sh volume_down
+bindsym XF86AudioMute exec --no-startup-id /home/krstfz/.config/dunst/volume_brightness.sh volume_mute
+
+# Brightness control using brightnessctl
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +1% && pkill -RTMIN+10 i3blocks 
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 1%- && pkill -RTMIN+10 i3blocks
+
+# Start a terminal
+bindsym $mod+Return exec $term 
+
+# Kill focused window
+bindsym $mod+q kill
+
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for resizing and right
+# mouse button for dragging.
+
+floating_modifier $mod normal
+
+# Reload the configuration file
+bindsym $mod+ctrl+r reload
+
+# Exit sway (logs you out of your Wayland session) - fuck that, mam rofi
+# bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+include /etc/sway/config-vars.d/*
+
+##################################################################################################################
+#################################################  WORKSPACES ####################################################
+##################################################################################################################
+    
+# switch to workspace
+bindsym $mod+plus workspace number 1
+bindsym $mod+ecaron workspace number 2
+bindsym $mod+scaron workspace number 3
+bindsym $mod+ccaron workspace number 4
+bindsym $mod+rcaron workspace number 5
+bindsym $mod+zcaron workspace number 6
+bindsym $mod+yacute workspace number 7
+bindsym $mod+aacute workspace number 8
+bindsym $mod+iacute workspace number 9
+bindsym $mod+eacute workspace number 10
+ 
+#  move focused container to workspace
+bindsym $mod+Shift+plus move container to workspace number 1
+bindsym $mod+Shift+ecaron move container to workspace number 2
+bindsym $mod+Shift+scaron move container to workspace number 3
+bindsym $mod+Shift+ccaron move container to workspace number 4
+bindsym $mod+Shift+rcaron move container to workspace number 5
+bindsym $mod+Shift+zcaron move container to workspace number 6
+bindsym $mod+Shift+yacute move container to workspace number 7
+bindsym $mod+Shift+aacute move container to workspace number 8
+bindsym $mod+Shift+iacute move container to workspace number 9
+bindsym $mod+Shift+eacute move container to workspace number 10
+
+##################################################################################################################
+#################################################  MOVING AROUND #################################################
+##################################################################################################################
+
+# Move your focus around
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# Or use $mod+[up|down|left|right]
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move the focused window with the same, but add Shift
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# Ditto, with arrow keys
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+##################################################################################################################
+#################################################  RESIZING ######################################################
+##################################################################################################################
+
+mode "resize" {
+# left will shrink the containers width
+# right will grow the containers width
+# up will shrink the containers height
+# down will grow the containers height
+bindsym $left resize shrink width 10px
+bindsym $down resize grow height 10px
+bindsym $up resize shrink height 10px
+bindsym $right resize grow width 10px
+
+# Ditto, with arrow keys
+bindsym Left resize shrink width 10px
+bindsym Down resize grow height 10px
+bindsym Up resize shrink height 10px
+bindsym Right resize grow width 10px
+
+# Return to default mode
+bindsym Return mode "default"
+bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+##################################################################################################################
+#################################################  OUTPUT CONFIG #################################################
+##################################################################################################################
+
+# Output configuration
+#
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+output "*" bg ~/Pictures/Pics/dracula/spookerino.png fill
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+##################################################################################################################
+#################################################  INPUT CONFIG ##################################################
+##################################################################################################################
+
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+    dwt enabled
+    tap enabled
+    middle_emulation enabled
+    }
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_layout cz
+    }
+
+exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+exec xwayland
+exec nm-applet --indicator
+exec dunst
+
+##################################################################################################################
+#################################################  IDLE CONFIG ###################################################
+##################################################################################################################
+
+# Idle configuration
+#
+# Example configuration:
+#
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+#          before-sleep 'swaylock -f -c 000000'
+#
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+##################################################################################################################
+#################################################  LAYOUT CONFIG #################################################
+##################################################################################################################
+
+# Layout stuff:
+# You can "split" the current object of your focus with
+# $mod+b or $mod+v, for horizontal and vertical splits
+# respectively.
+bindsym $mod+b splith
+bindsym $mod+v splitv
+
+# Switch the current container between different layout styles
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Make the current focus fullscreen
+bindsym $mod+m fullscreen
+
+# Toggle the current focus between tiling and floating mode
+bindsym $mod+f floating toggle
+
+# Swap focus between the tiling area and the floating area
+bindsym $mod+space focus mode_toggle
+
+# Move focus to the parent container
+bindsym $mod+a focus parent
+
+##################################################################################################################
+#################################################  BAR CONFIG ####################################################
+##################################################################################################################
+
+# Read `man 5 sway-bar` for more information about this section.
+
+bar {
+	status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/config
+	position top
+	tray_padding 4
+	separator_symbol ""
+	font pango:JetBrainsMono Nerd Font ExtraBold 12 
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    #status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+
+    colors {
+        statusline #f8f8f2
+        background #282A36
+        separator  #fadbb9      
+                                #border     #bg         #text        
+        inactive_workspace      #44475a     #44475a     #BFBFBF
+        focused_workspace       #bd93f9     #bd93f9     #282a36
+        urgent_workspace        #ff5555     #ff5555     #282a36 
+    }
+}
+
+include /etc/sway/config.d/*
+
+##################################################################################################################
+#################################################  THEME CONFIG ##################################################
+##################################################################################################################
+
+# target                 title     	bg    	   text       	indicator     	brdr
+client.focused           #bd93f9	#bd93f9	   #282a36     	#bd93f9		#bd93f9
+client.unfocused         #282a36   	#44475a	   #282a36	#44475a		#44475a
+client.urgent            #ff5555	#ff5555	   #282a36     	#ff5555	        #ff5555
+client.placeholder       #282a36	#282a36    #f8f8f2     	#282a36	        #282a36
+client.background        #282a36

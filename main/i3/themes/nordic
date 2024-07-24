@@ -1,0 +1,46 @@
+####################### NORD THEME ##########################
+
+set $bg                 #2e3440
+set $bg1                #3b4252
+set $bg2                #434c5e
+set $bg3		#4c566a
+set $fg                 #eceff4
+set $fg_alt		#e5e9f0         
+set $bluyen             #88c0d0
+set $cyan		#8fbcbb
+set $blue		#5e81ac
+set $gray		#d8dee9
+set $green              #a3be8c     
+set $orange             #d08770         
+set $purple             #b48ead
+set $red                #bf616a
+set $yellow             #ebcb8b
+set $aqua               #8cbe94
+set $pink		#d088a6
+
+
+#SEPARATOR		#ebae8b
+#BAT-ALT		#bcbe8c
+
+##### PANEL #####
+
+colors {
+                background $bg 
+                statusline $fg
+                separator #ebae8b 
+
+                ###                border       bg              text
+                focused_workspace  $blue   	$blue          $bg
+                inactive_workspace $bg2         $bg2            $fg
+                urgent_workspace   $red         $red            $bg
+                }
+
+
+#### WINDOWS #####
+
+# target                 title          bg         text       indicator   brdr
+client.focused           $blue          $blue       $bg        $fg         $fg
+client.unfocused         $bg            $bg        $bg3       $bg         $bg
+client.urgent            $red           $red       $bg2       $red        $red
+client.placeholder       $bg2           $bg        $fg        $bg2        $bg2
+client.background        $bg

@@ -1,0 +1,22 @@
+####################### TOKYO NIGHT ##########################
+
+set $base           #1a1b26
+set $bg             #414868
+set $bg1            #565f89
+set $bg3            #9aa5ce
+set $grey           #cfc9c2
+set $fg_alt         #a9b1d6
+set $fg             #c0caf5
+set $purple         #bb9af7
+set $blue           #7aa2f7
+set $sky            #7dcfff
+set $teal           #2ac3de
+set $lg_teal        #b4f9f8
+set $aqua           #73daca
+set $green          #9ece6a
+set $yellow         #e0af68
+set $orange         #ff9e64
+set $red            #f7768e
+set $pink           #f59af7
+
+### storm           #24283b
