@@ -1,0 +1,38 @@
+########## SOLARIZED ##########
+set $base           #002b36
+set $bg             #073642
+set $bg1            #586e75
+set $bg2            #657b83
+set $bg3            #839496
+set $bg4            #93a1a1
+set $fg             #eee8d5
+set $fg2            #fdf6e3
+set $yellow         #b58900
+set $orange         #cb4b16
+set $red            #dc322f
+set $magenta        #d33682
+set $violet         #6c71c4
+set $blue           #268bd2
+set $cyan           #2aa198
+set $aqua           #2aa175
+set $green          #859900
+
+# target                 title     	bg    	   text       indicator     brdr
+client.focused           $yellow    $yellow	   $base      $bg2	        $bg2
+client.unfocused         $base    	$bg	       $bg3       $bg	        $bg
+client.urgent            $red		$red 	   $bg        $red	        $red
+client.placeholder       $bg1 		$bg 	   $fg        $bg1   	    $bg1
+client.background        $bg
+
+
+
+colors {
+        	background $base 
+        	statusline $fg
+        	separator #a19f93 
+
+        	###		           border	bg  	   	text
+        	focused_workspace  $yellow	$yellow		$base
+        	inactive_workspace $bg		$bg 		$bg4
+        	urgent_workspace   $red		$red		$bg
+        	}
