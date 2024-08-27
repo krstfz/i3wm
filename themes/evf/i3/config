@@ -240,7 +240,7 @@ bar {
 	separator_symbol ""
 	font pango:JetBrainsMono Nerd Font ExtraBold 12  
 	colors {
-        	background $bgdim 
+        	background $bg0 
         	statusline #e9e2d4
         	separator #e0c0aa 
 
