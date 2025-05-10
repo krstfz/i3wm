@@ -1,10 +1,10 @@
-# i3wm-2.0
+# i3wm-3.0
 i3wm setups (catppuccin // everforest // dracula // gruvbox // nord // solarized)
 * wm - i3
-* bar - i3blocks
+* bar - i3blocks // polybar
 * spotify - spicetify 
 * launcher - rofi
-* fonts - JetBrainsMono Nerd Font, Ubuntu Nerd Font, Fira Code Mono
+* fonts - JetBrainsMono Nerd Font, Ubuntu Nerd Font, Hack Nerd Font
 
 **Preview**
 
